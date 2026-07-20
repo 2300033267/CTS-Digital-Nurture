@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.cts.employeemanagementsystem.controller.EmployeeControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 21.47 s <<< FAILURE! -- in com.cts.employeemanagementsystem.controller.EmployeeControllerTest
+com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testGetEmployeeById_Success -- Time elapsed: 2.274 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$._links.self.href"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:351)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:106)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testGetEmployeeById_Success(EmployeeControllerTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Missing property in path $['_links']
+
+com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testSaveEmployee_Success -- Time elapsed: 0.243 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$._links.self.href"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:351)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:106)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testSaveEmployee_Success(EmployeeControllerTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Missing property in path $['_links']
+
+com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testGetAllEmployees -- Time elapsed: 0.071 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$._embedded.employeeDTOList"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:351)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:106)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:88)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.cts.employeemanagementsystem.controller.EmployeeControllerTest.testGetAllEmployees(EmployeeControllerTest.java:79)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Expected to find an object with property ['_embedded'] in path $ but found 'net.minidev.json.JSONArray'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'.
+
