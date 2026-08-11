@@ -25,11 +25,11 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        working-directory: Week5
+        working-directory: Week5/react-app
         run: npm install
 
       - name: Build React app
-        working-directory: Week5
+        working-directory: Week5/react-app
         run: npm run build
 
       - name: Setup GitHub Pages
@@ -38,7 +38,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Week5/dist
+          path: Week5/react-app/dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
