@@ -1,0 +1,13 @@
+# React
+react-app/node_modules/
+react-app/dist/
+
+# Spring Boot
+employee-backend/target/
+
+# Environment files
+.env
+
+# IDE
+.vscode/
+.idea/
